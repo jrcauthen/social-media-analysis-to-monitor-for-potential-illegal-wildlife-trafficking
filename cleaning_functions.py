@@ -33,7 +33,7 @@ def remove_invalid_characters(tweet: str,language: str) -> str:
     #tweet = tweet.encode(encoding, errors="ignore")  # filter out non ASCII/UTF-8 characters
     
     # filter out all non-alphanumeric characters
-    regex = re.compile('[' + re.escape('!@#$%^&*()_+=-[]\'\\{}"|\.>/?,<;:~`') + '0-9-_]')
+    regex = re.compile('[' + re.escape('!@#$%^&*()_+=-[]\'\\{}"|\.>/?,<;:~`’“”') + '0-9-_]')
     tweet = regex.sub('',tweet)
     tweet = tweet.replace('\u2026','')  # this removes ellipses from tweets
     
